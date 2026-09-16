@@ -93,3 +93,75 @@ h1 {
     transform: translateX(50px);
   }
 }
+
+/* Media Queries for Screen Size */
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+  /* make my grid have only 3 columns */
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* change background color on my "screen size" div */
+  .screen {
+    background-color: tomato;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  /* make my grid have only 1 column */
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Orientation */
+
+@media (orientation: landscape) {
+  .orientation {
+    background-color: mediumseagreen;
+  }
+}
+
+/* Darkmode */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: white;
+  }
+
+  .dark {
+    background-color: black;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    animation: none;
+  }
+}
+
+/* Print */
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .print {
+    background-color: black;
+    display: none;
+  }
+
+  nav,
+  footer,
+  .no-print {
+    display: none;
+  }
+}
